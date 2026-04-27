@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daveigh Gordon | Personal Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* ---------- Reset ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            background-color: #0b1220;
+            color: #ffffff;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* ---------- Animations ---------- */
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-60px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* ---------- Sidebar ---------- */
+        aside {
+            width: 280px;
+            background-color: #020617;
+            padding: 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            animation: slideInLeft 1.2s ease forwards;
+        }
+
+        aside h1 {
+            font-size: 2rem;
+            color: #58a6ff;
+        }
+
+        aside p {
+            font-size: 0.95rem;
+            color: #c9d1d9;
+        }
+
+        nav a {
+            display: block;
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.6rem;
+            border-radius: 8px;
+            color: #ffffff;
+            background-color: #0d1117;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #161b22;
+            transform: translateX(6px);
+        }
+
+        /* ---------- Main Content ---------- */
+        main {
+            flex: 1;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        section {
+            background-color: #161b22;
+            border-radius: 16px;
+            padding: 2.5rem;
+            animation: fadeUp 1.2s ease forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(88, 166, 255, 0.3);
+        }
+
+        section h2 {
+            color: #58a6ff;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        section p {
+            color: #d1d5da;
+            line-height: 1.7;
+        }
+
+        /* ---------- Interests ---------- */
+        .interest-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .interest-item {
+            background-color: #0d1117;
+            padding: 1.5rem;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border: 1px solid #30363d;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .interest-item:hover {
+            transform: scale(1.07);
+            background-color: #1f2937;
+        }
+
+        .interest-icon {
+            font-size: 2rem;
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            margin-top: auto;
+            text-align: center;
+            color: #8b949e;
+            font-size: 0.85rem;
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 900px) {
+            body {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 0.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside>
+        <h1>Daveigh Gordon</h1>
+        <p>
+            Computer Science Student<br>
+            Cybersecurity Concentration
+        </p>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#interests">Interests</a>
+            <a href="#goals">Goals</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a motivated computer science student with a strong interest in
+                technology and problem-solving. I enjoy learning new skills and
+                exploring areas of computing that challenge me creatively and analytically.
+            </p>
+        </section>
+
+        <section id="interests">
+            <h2>Interests & Hobbies</h2>
+            <div class="interest-list">
+                <div class="interest-item">
+                    <span class="interest-icon">🤸‍♀️</span>
+                    <span>Gymnastics</span>
+                </div>
+                <div class="interest-item">
+                    <span class="interest-icon">✈️</span>
+                    <span>Traveling</span>
+                </div>
+                <div class="interest-item">
+                    <span class="interest-icon">🎧</span>
+                    <span>Music</span>
+                </div>
+                <div class="interest-item">
+                    <span class="interest-icon">🧩</span>
+                    <span>Puzzles</span>
+                </div>
+                <div class="interest-item">
+                    <span class="interest-icon">🃏</span>
+                    <span>Solitaire</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="goals">
+            <h2>Goals</h2>
+            <p>
+                I am currently studying computer science with a concentration in cybersecurity.
+                I am working toward a career in either web design or cybersecurity analysis,
+                combining creativity, security awareness, and technical precision.
+            </p>
+        </section>
+
+        <footer>
+            © 2026 Daveigh Gordon
+        </footer>
+
+    </main>
+
+</body>
+</html>
